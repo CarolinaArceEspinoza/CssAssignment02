@@ -1,0 +1,235 @@
+
+/* BACKGROUND */
+html {
+    scroll-behavior: smooth;
+	background: url(../images/Background.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #003642;
+	background-size: cover;
+}
+
+/* INSERT FONT */
+@font-face {
+    font-family: 'Alivia';
+    src: url(../resouces/AliviaRegular.ttf);
+}
+
+/* STRUCTURE */
+body {
+	font-size: 100%;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+	color: #ffffff;
+	margin:0px;
+}
+#container {
+	width: 80%;
+    padding: 0px 0px 10px 0px;
+    box-shadow: 0px 0px 50px #ffac43;
+    margin: 0px auto;
+    border-width: 0px 3px;
+    border-style: double;
+    border-color: #f5bc03;
+	position: relative;
+}
+header {
+    display: inline-block;
+    width: 98%;
+    height: auto;
+    background: linear-gradient(180deg, #0f171e, transparent);
+    margin: 0 1% 30px 1%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header::before {position: absolute;
+    content: "";
+    width: 98%;
+    height: 310px;
+    background: url(../images/Girnalda.png);
+    background-size: cover;
+}
+main {
+	width: 100%;
+	margin: 0px auto;
+	line-height: 29px;
+	text-align: center;
+}	
+
+/* button to go up the page */
+.up {
+	position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #f5bd00;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    font-size: 46px;
+    color: #ffffff;
+    bottom: 10px;
+    right: 10px;
+    text-decoration: none;
+	z-index: 1000;
+}
+
+/* CONTENT */
+
+/* YouTube video iframe */	
+main iframe {
+	width: 60%;
+	height: auto;
+	min-height: 360px;
+	background-color: black;
+}
+
+/* texts */	
+h1 {
+	font-family: 'Alivia', Times, serif;
+    font-size: 120px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff281;
+    z-index: 10;
+    font-weight: lighter;
+    text-align: center;
+    margin: 30px auto;
+	background: linear-gradient(to right, #da9f27, #f9e373, #dfab24, #f3da5b, #deac2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 171px;
+    line-height: 156px;
+    padding: 0px;
+    position: relative;
+	filter: drop-shadow(4px 4px #333);
+}
+h2 {
+	margin: -65px 0px 0px 280px;
+    font-weight: lighter;
+    text-align: center;
+}
+#chorus {
+	color: #ffffff;
+    position: relative;
+    background-color: rgb(255 0 0 / 38%);
+    border-radius: 60px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+#chorus::before, #chorus::after {
+	position: absolute;
+	content: '';
+	width: 50px;
+	height: 50px;
+	background: url(../images/FabIcon.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}	
+#chorus::before {
+	rotate: 342deg;
+	left: -30px;
+}
+#chorus::after {
+	rotate: 26deg;
+	right: -17px;
+	bottom: 0px;
+}
+
+/* Footer */
+footer {
+	width: 98%;
+    background: rgba(243, 152, 37, 0.5);
+    padding: 0px;
+    margin: 0px 1% 0px 1%;
+    box-sizing: border-box;
+    text-align: center;
+	position: relative;
+}
+
+footer #links {
+	width: 98%;
+    padding: 0px;
+}
+footer::after, footer::before {
+	width: 10%;
+    height: 10%;
+    content: "♥ ♥ ♥";
+    display: block;
+    position: absolute;
+    color: #ffffff; 
+	top: 5px;
+}
+footer::before{
+	left: 0px;
+}
+footer::after{
+	right: 0px;
+}
+footer #links li {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-right: 2px groove #f0f0f0;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+footer #links li a {
+	color: #ffffff;
+	text-decoration: none;
+}
+footer #links li a:hover {
+	color: #ff7474;
+}
+footer #links li a:visited {
+	color: #ffcc00;
+}
+
+/* Flip card container */
+.flip-card {
+	height: auto;
+    perspective: 1000px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+	width: 60%;
+}
+.flip-card-inner {
+	position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+	margin: 0px auto 20px auto;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    box-sizing: border-box;
+}
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 80%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	top: 0px;
+	margin: 0 auto;
+}
+/* Style the front side */
+.flip-card-front {
+	position: relative;
+  }
+/* Style the back side */
+.flip-card-back {
+	color: #ffe064!important;
+	transform: rotateY(180deg);
+	right: 10%;
+  }
+.flip-card-back #chorus {
+	color: #ffe064!important;
+}
