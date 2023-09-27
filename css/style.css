@@ -80,6 +80,7 @@ main iframe {
 	height: auto;
 	min-height: 360px;
 	background-color: black;
+    border:0px;
 }
 
 /* texts */	
@@ -107,7 +108,7 @@ h2 {
     font-weight: lighter;
     text-align: center;
 }
-#chorus {
+.chorus {
 	color: #ffffff;
     position: relative;
     background-color: rgb(255 0 0 / 38%);
@@ -115,7 +116,7 @@ h2 {
     font-weight: bold;
     padding: 10px 0px;
 }
-#chorus::before, #chorus::after {
+.chorus::before, .chorus::after {
 	position: absolute;
 	content: '';
 	width: 50px;
@@ -124,11 +125,11 @@ h2 {
 	background-size: contain;
 	background-repeat: no-repeat;
 }	
-#chorus::before {
+.chorus::before {
 	rotate: 342deg;
 	left: -30px;
 }
-#chorus::after {
+.chorus::after {
 	rotate: 26deg;
 	right: -17px;
 	bottom: 0px;
@@ -168,7 +169,7 @@ footer #links li {
 	display: inline-block;
 	padding: 10px 20px;
 	text-decoration: none;
-	border-right: 2px groove #f0f0f0;
+	border-right: 2px groove #795548;
 	text-transform: uppercase;
 	font-size: 10px;
 }
@@ -230,7 +231,7 @@ footer #links li a:visited {
 	transform: rotateY(180deg);
 	right: 10%;
   }
-.flip-card-back #chorus {
+.flip-card-back .chorus {
 	color: #ffe064!important;
 }
 .pointer {
@@ -257,3 +258,8 @@ footer #links li a:visited {
     display: inline-block;
 	float:left;
 }
+
+/* Some corrections for small devices */
+@media only screen and (max-width: 700px){ 
+	footer #links li {border-bottom: 2px groove #795548; border-right:none; width:60%;}
+	}
