@@ -44,7 +44,7 @@ header {
 header::before {position: absolute;
     content: "";
     width: 98%;
-    height: 310px;
+    height: 450px;
     background: url(../images/Girnalda.png);
     background-size: cover;
 }
@@ -202,7 +202,7 @@ footer #links li a:visited {
     width: 100%;
     height: auto;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 1.2s;
     transform-style: preserve-3d;
 	margin: 0px auto 20px auto;
     background: rgba(0,0,0,0.5);
